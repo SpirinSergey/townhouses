@@ -1,0 +1,74 @@
+{% load crispy_forms_tags %}
+
+<!-- Modal Book an appointment -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-0">
+            <div class="modal-header">
+                <h5 class="modal-title" style="color: #455694" id="exampleModalLabel">Book an appointment</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <form method="post" id="bookpoint_form" class="contact-form">
+                    {% csrf_token %}
+                    <div class="row g-2 my-font-contact" style="opacity: 0.8;!important;">
+                        <div>
+                            <div class="form-floating mb-3">
+                                <div id="div_id_first_name">
+                                    <input type="text" name="first_name" id="id_first_name" class="my-form font-regular"
+                                           placeholder="First name*" required>
+                                </div>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <div id="div_id_last_name">
+                                    <input type="text" name="last_name" id="id_last_name" class="my-form font-regular"
+                                           placeholder="Last name*" required>
+                                </div>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <div id="div_id_phone">
+                                    <input type="tel" name="phone" id="id_phone" class="my-form font-regular phone"
+                                           placeholder="Your phone*" required>
+                                </div>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <div id="div_id_email">
+                                    <input type="text" id="id_email" name="email" class="my-form font-regular"
+                                           placeholder="Your email*" required>
+                                </div>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <div>
+                                    <select class="my-form font-regular" style="color: #848383" name="agent_type"
+                                            aria-label="Default select example" required>
+                                        <option class="font-regular" style="color: #848383" value="">Are you a realtor?*
+                                        </option>
+                                        <option class="my-sel font-regular" value="yes">Yes</option>
+                                        <option class="my-sel font-regular" value="no">No</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <textarea name="message" id="id_message" style="height: 50px"
+                                          class="my-form font-regular rounded-0" rows="3"
+                                          placeholder="Message"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <div id="div_id_date">
+                                    <input type="datetime-local" id="id_date" name="date" class="my-form font-regular"
+                                           style="color: #848383"
+                                           placeholder="Select date and time" required>
+                                </div>
+                            </div>
+                            <div class="mb-3 form-group g-recaptcha"
+                                 data-sitekey="6LdEDmIfAAAAAG0pduuigfo5zmBDCBCLbujFGpbi"></div>
+                            <button name="bookpoint_form_btn" type="submit"
+                                    class="but-empty mb-3">Send
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

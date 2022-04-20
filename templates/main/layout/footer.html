@@ -1,0 +1,76 @@
+{% load static %}
+
+<style>
+    @media (max-width: 372px) {
+        .but-blue {
+            letter-spacing: 0;
+        }
+    }
+</style>
+
+
+<section class="container-fluid footer-contacts-none">
+    <div class="row">
+        <div class="col-md-12 col-lg-12 col-xl-8 pt-5 text-center order-xl-1">
+            <div class="mb-5">
+                <span class="fs-5"><a class="but-blue"
+                                      data-bs-toggle="modal"
+                                      data-bs-target="#exampleModal2">Book a time</a></span>
+                <span class="fs-5" style="margin-left: 22px"><a class="but-blue"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#exampleModal1">Write to us </a></span>
+            </div>
+            <div class="pb-2 ">
+                <a class="fs-5 icons-style whatsapp mx-2" href="https://wa.me/13053067370"
+                   style="text-decoration: none;">
+                    <img class="img-svg icons-style whatsapp" src="{% static 'main/img/icons/whatsapp.svg' %}"
+                         alt="whatsapp">
+                </a>
+                <a class="fs-5 icons-style telegram mx-2" href="https://wa.me/13053067370"
+                   style="text-decoration: none;">
+                    <img class="img-svg icons-style telegram" src="{% static 'main/img/icons/telegram.svg' %}"
+                         alt="whatsapp">
+                </a>
+                <a class="fs-5 icons-style instagram mx-2" href="https://wa.me/13053067370"
+                   style="text-decoration: none;">
+                    <img class="img-svg icons-style instagram" src="{% static 'main/img/icons/instagram.svg' %}"
+                         alt="whatsapp">
+                </a>
+                <a class="fs-5 icons-style facebook mx-2" href="https://wa.me/13053067370"
+                   style="text-decoration: none;">
+                    <img class="img-svg icons-style facebook" src="{% static 'main/img/icons/facebook.svg' %}"
+                         alt="whatsapp">
+                </a>
+            </div>
+            <div class="pt-3">
+                <p><a href="tel:+1 (305) 306-7370" class="my-font"
+                      style="text-decoration: none; white-space: nowrap;">+1 (305) 306-7370</a></p>
+                <p><a href="mailto:info@residencesbaccarat.com" class="my-font"
+                      style="text-decoration: none;"> info@residencesbaccarat.com</a></p>
+            </div>
+            <div class="mb-2">
+                <a class="font-link" href="{% url 'terms' %}"> Terms and Conditions</a>
+                <span class="fs-5 mx-3" style="color: #455694"> | </span>
+                <a class="font-link" href="{% url 'privacy-policy' %}">Privacy Policy</a>
+            </div>
+            <p class="mb-0" style="color: #455694">© 2022 Vera Realty LLC.</p>
+        </div>
+        <div class="col-md-12 col-lg-12 col-xl-2 d-flex justify-content-start mb-0 px-0">
+            <img class="footer-bg" src="{% static 'main/img/footer_img.png' %}" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid footer-contacts-block">
+    <div class="row">
+        <div class="col-md-12 p-3 text-center">
+            <div class="mb-2">
+                <a class="font-link" href="{% url 'terms' %}"> Terms and Conditions</a>
+                <span class="fs-5 mx-2" style="color: #455694"> | </span>
+                <a class="font-link"  href="{% url 'privacy-policy' %}">Privacy Policy</a>
+            </div>
+            <p class="mb-1" style="color: #455694">© 2022 Vera Realty LLC.</p>
+        </div>
+    </div>
+</section>
+

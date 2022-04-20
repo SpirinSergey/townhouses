@@ -1,0 +1,69 @@
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url("/static/main/fonts/montserrat/Montserrat-Regular.ttf") format("truetype");
+    font-style: auto;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Montserrat-Medium";
+    src: url("/static/main/fonts/montserrat/Montserrat-Medium.ttf") format("truetype");
+    font-style: auto;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Montserrat-SemiBold";
+    src: url("/static/main/fonts/montserrat/Montserrat-SemiBold.ttf") format("truetype");
+    font-style: auto;
+    font-weight: normal;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: "Montserrat-SemiBold", sans-serif;
+    color: #455694;
+}
+
+p, td, th, select, option, a, li {
+    font-family: "Montserrat-Medium", sans-serif;
+    color: #455694;
+}
+
+.font-regular {
+    font-family: "Montserrat-Regular", sans-serif !important;
+}
+
+.font-link {
+    font-family: "Montserrat-Regular", sans-serif !important;
+    color: #455694;
+}
+
+.font-link:hover {
+    color: #455694;
+    text-decoration: underline #f5c269;
+    text-decoration-thickness: 3px;
+}
+
+.my-font {
+    font-family: "Montserrat-Regular", sans-serif !important;
+    color: #455694;
+}
+
+.my-font:hover {
+    color: #f5c269;
+}
+
+.font-gt-all {
+    font-family: "Montserrat-Regular", sans-serif !important;
+    color: #455694 !important;
+    font-size: 18px;
+}
+
+.font-gt-all:hover {
+    color: #f5c269 !important;
+
+}
+
+
+
+

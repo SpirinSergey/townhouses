@@ -1,0 +1,47 @@
+{% extends 'main/layout/layout.html' %}
+{% load static %}
+
+{% block title %}Available Units{% endblock %}
+
+{% block top %}
+    <style>
+        .font-available_units {
+            font-weight: 800;
+            color: #455694 !important;
+            text-decoration: underline #f5c269;
+            text-decoration-thickness: 3px;
+        }
+
+        @media (min-width: 992px) {
+            .block-1 {
+                border-radius: 0 0 0 20px;
+            }
+
+            .block-2 {
+                border-radius: 0 20px 20px 0;
+            }
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+
+    <section class="container-fluid bg-color mx-0 pb-0">
+        <div class="row align-items-center">
+            <div class="col-lg-6 text-center">
+                <div class="container">
+                    <h2 class="display-5 mb-0">Available Units</h2>
+                    <p class="fs-4 p-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus quod sunt
+                        ut voluptate. Blanditiis, cupiditate, doloremque enim harum libero omnis perferendis quis quo
+                        tenetur, veniam vero voluptas.</p>
+                    <a class="but-blue text-uppercase" href="{% url 'available_units' %}">Learn more</a>
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-1 px-0">
+                <img class="image-style block-1" src="{% static 'main/img/available_units/01.jpg' %}"
+                     alt="Vera Realty Townhouses">
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

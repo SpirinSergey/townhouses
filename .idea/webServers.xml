@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="44176a11-b964-4b31-8091-da0b1e4ccf58" name="Myspace" url="http://spirin.space/">
+        <fileTransfer rootFolder="/home/serg/townhouses" accessType="SFTP" host="92.255.76.160" port="22" sshConfigId="85868f48-bc47-4909-91b4-280345470968" sshConfig="root@92.255.76.160:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

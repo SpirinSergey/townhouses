@@ -1,0 +1,442 @@
+/* --- image inline --- */
+.home-amenities {
+    max-width: 100%;
+    height: auto;
+}
+
+.home-amenities-top {
+    max-width: 100%;
+    height: auto;
+}
+
+.home-amenities-bottom {
+    width: 100%;
+    height: 48vh;
+    object-fit: cover;
+}
+
+.my-none {
+    display: none;
+}
+
+.bg-color {
+    background: #f2f5f7;
+}
+
+.footer {
+    bottom: 0;
+    z-index: 1;
+    position: sticky;
+    background: #ffffff;
+}
+
+.footer-contacts-block {
+    display: none;
+}
+
+/*первое изображение на HOME*/
+.hero-bg {
+    background-image: url('/static/main/img/home/hero.jpg');
+    height: 90vh;
+    background-size: cover;
+    background-position: center bottom;
+}
+
+/*изображение 50/50*/
+.image-style {
+    width: 100%;
+    height: 115vh;
+    object-fit: cover;
+}
+
+.image-hero-bg {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+}
+
+.footer-bg {
+    height: 33vh;
+    width: auto;
+}
+
+@media (max-width: 425px) {
+    .footer-bg {
+        height: 22vh;
+    }
+}
+
+@media (min-width: 1200px) {
+    .footer-bg {
+        height: 49vh;
+    }
+}
+
+
+/* ============ BUTTONS ============ */
+.but-hero {
+    font-size: 13px;
+    font-family: "Montserrat-SemiBold", sans-serif !important;
+    text-transform: uppercase;
+    line-height: 13px;
+    letter-spacing: 2.7px;
+    /*border-width: 1px 1px 1px 1px;*/
+    border-radius: 6px;
+    padding: 16px 20px 16px 20px;
+    color: #455694FF;
+    background-color: #f5c269;
+    transition-duration: 0.8s;
+    text-decoration: none;
+}
+
+.but-hero:hover {
+    font-family: "Montserrat-SemiBold", sans-serif !important;
+    color: #f5c269 !important;
+    background-color: #455694FF;
+    transition-duration: 0.3s;
+    box-shadow: 0 0 10px 5px #f5c269;
+}
+
+.but-hero:active {
+    color: #c8c9c7;
+    border-color: #c8c9c7;
+    transition-duration: 0.3s;
+}
+
+
+/*незалитая*/
+.but-empty {
+    background-color: Transparent;
+    border: 1px solid #455694;
+    font-family: "Montserrat-SemiBold", sans-serif !important;
+    letter-spacing: 1px;
+    line-height: 15px;
+    color: #455694 !important;
+    padding: 15px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 6px 3px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.but-empty:hover {
+    border: 1px solid #f5c269;
+    background-color: rgba(255, 255, 255, 0);
+    color: #f5c269 !important;
+    transition-duration: 0.1s;
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+}
+
+.but-empty:active {
+    border: 1px solid #455694;
+    color: #455694 !important;
+}
+
+.but-blue {
+    font-size: 13px;
+    font-family: "Montserrat-SemiBold", sans-serif !important;
+    text-transform: uppercase;
+    line-height: 13px;
+    letter-spacing: 2.7px;
+    border-width: 1px 1px 1px 1px;
+    border-radius: 0px 0px 0px 0px;
+    padding: 16px 20px 16px 20px;
+    color: #f2f5f7;
+    background-color: #455694FF;
+    transition-duration: 0.3s;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.but-blue:hover {
+    font-family: "Montserrat-SemiBold", sans-serif !important;
+    color: #eaeaea !important;
+    background-color: #2b365e;
+    transition-duration: 0.3s;
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+}
+
+.but-blue:active {
+    color: white !important;
+    background-color: #455694FF;
+    transition-duration: 0.3s;
+}
+
+
+/* ============ /BUTTONS ============ */
+
+
+
+
+/* ============ ICONS ============ */
+.icons-style {
+    width: 26px;
+    height: 26px;
+    fill: #455694;
+    color: #455694;
+}
+
+
+.icons-style:hover {
+    color: #0dcaf0;
+}
+
+.whatsapp:hover {
+    fill: #35ef0c !important;
+    color: #35ef0c !important;
+}
+
+.telegram:hover {
+    fill: #14c4e3;
+    color: #14c4e3;
+}
+
+.facebook:hover {
+    fill: #1448e3;
+    color: #1448e3;
+}
+
+.instagram:hover {
+    fill: #e31414;
+    color: #e31414;
+}
+
+/* ============ /ICONS ============ */
+
+/* ============ TUMBLERS ============ */
+.tumbler-on-992 {
+    display: block;
+}
+
+.tumbler-off-992 {
+    display: none;
+}
+
+.tumbler-off {
+    display: none;
+}
+
+/* ============ /TUMBLERS ============ */
+
+
+/* ============ Cookie ============ */
+#cookie_notification {
+    display: none;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    width: 860px;
+    max-width: 90%;
+    transform: translateX(-50%);
+    padding: 8px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.4);
+    opacity: .96;
+    z-index: 101;
+}
+
+#cookie_notification p {
+    margin: 0;
+    font-size: 0.6rem;
+    text-align: left;
+    color: black;
+}
+
+
+@media (min-width: 576px) {
+    #cookie_notification.show {
+        display: flex;
+    }
+
+    .cookie_accept {
+        margin: 0 0 0 10px;
+    }
+}
+
+@media (max-width: 575px) {
+    #cookie_notification.show {
+        display: block;
+        text-align: left;
+    }
+
+    .cookie_accept {
+        margin: 10px 0 0 0;
+    }
+}
+
+/* ============ /Cookie ============ */
+
+/* ============ /Other Custom ============ */
+.equal-md-1-1 {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    height: auto !important;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+}
+
+.equal-md-1-1::before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 100%;
+}
+
+.equal-md-1-1 > * {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.media {
+    width: 100%;
+    margin: 0;
+    overflow: hidden
+}
+
+.media span, .media video {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer
+}
+
+.media[class*="-background"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0
+}
+
+.media[class*="-background"] > * {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0
+}
+
+.media[class*="-video"] span {
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1)
+}
+
+.media[class*="-video"]::after {
+    transform: scale(1.1);
+    transition: all 0.2s;
+    position: absolute;
+    font-family: bootstrap-icons;
+    content: "\f4f4";
+    top: 50%;
+    left: 50%;
+    width: 6.25rem;
+    height: 6.25rem;
+    margin-top: -3.125rem;
+    margin-left: -3.125rem;
+    line-height: 6.25rem;
+    border-radius: 6.25rem;
+    background-color: #000;
+    color: #fff;
+    opacity: 1;
+    text-align: center;
+    font-size: 2rem;
+    cursor: pointer
+}
+
+.media[class*="-video"]:hover::after {
+    transform: scale(1)
+}
+
+.media[class*="-video"]:hover span {
+    transform: scale(1.05)
+}
+
+.media[class*="-image"] span {
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1)
+}
+
+.media[class*="-image"]:hover span {
+    transform: scale(1.05)
+}
+
+/* ============ /Other Custom ============ */
+
+.my-link {
+    color: #455694;
+    text-decoration: none;
+}
+
+.my-link:hover {
+    color: #f5c269;
+}
+
+.dev-img {
+    width: 100%;
+    height: 95vh;
+    object-fit: cover;
+}
+
+.my-form {
+    border: none;
+    border-bottom: 1px solid #455694;
+    width: 100%;
+}
+
+.form-bg-color {
+    background: #f2f5f7;
+}
+
+
+@media only screen and (max-width: 992px) {
+    .block-contacts {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .image-style {
+        height: 80vh;
+    }
+
+    .dev-img {
+        height: 65vh;
+    }
+
+    .tumbler-on-992 {
+        display: none;
+    }
+
+    .tumbler-off-992 {
+        display: block;
+    }
+}
+
+.header {
+    background-color: rgb(255, 255, 255);
+    font-size: 16px;
+    fill: white;
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+.fill-white {
+    color: white;
+    fill: white !important;
+}
+

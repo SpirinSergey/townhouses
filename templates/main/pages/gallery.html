@@ -1,0 +1,38 @@
+{% extends 'main/layout/layout.html' %}
+{% load static %}
+
+
+{% block title %}Gallery{% endblock %}
+
+{% block top %}
+    <style>
+        .font-gallery {
+            font-weight: 800;
+            color: #455694 !important;
+            text-decoration: solid underline #f5c269;
+            text-decoration-thickness: 3px;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+
+    <div class="pb-0" id="gallery" style="padding-top: 67px;!important;">
+        <div class="container">
+            <h2 class="text-center display-5 pb-3 mt-5">Gallery</h2>
+            <div class="row portfolio-container gallery-1">
+                {% for i in gal_img %}
+                    <div class="col-lg-4 mb-4" >
+                        <figure class="media media-image equal-md-1-1"
+                                style="border-radius: 15px 15px 15px 15px"
+                                data-bp='{"imgSrc": "{{ i.gallery_img.url }}" , "parentGalleryClass": "gallery-1" }'>
+                            <span style="background-image: url('{{ i.gallery_img.url }}')"></span>
+                        </figure>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+

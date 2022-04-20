@@ -1,0 +1,78 @@
+{% extends 'main/layout/layout.html' %}
+{% load static %}
+
+{% block title %}About{% endblock %}
+
+{% block top %}
+    <style>
+        .font-about {
+            font-weight: 800;
+            color: #455694 !important;
+            text-decoration: underline #f5c269;
+            text-decoration-thickness: 3px;
+
+        }
+
+        @media (min-width: 992px) {
+            .block-1 {
+                border-radius: 0 0 0 20px;
+            }
+
+            .block-2 {
+                border-radius: 0 20px 20px 0;
+            }
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <section class="container-fluid bg-color mx-0 mb-0">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="container text-center">
+                    <h2 class="display-5 mb-0 mt-5">About Us</h2>
+                    <p class="fs-4 p-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci dicta ea,
+                        harum id iste iure nesciunt officiis quidem repellat repudiandae tempora ullam, veniam, vitae.
+                        Cupiditate dolorem ducimus eligendi optio velit?</p>
+                    <a data-bs-toggle="modal"
+                       data-bs-target="#sign_up"
+                       class="but-blue">
+                        Sign up
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 px-0">
+                <img class="image-style block-1" src="{% static 'main/img/about/01.jpg' %}"
+                     alt="Vera Realty Townhouses">
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid">
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-9">
+                <h3 class="fs-3 text-center p-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis
+                    consectetur, eius et ex minus nobis quae quibusdam, quos sunt tempore temporibus voluptatem.
+                    Autem.</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid bg-color mx-0 pb-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6  order-lg-1">
+                <div class="container text-center">
+                    <p class="fs-4 p-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis
+                        consectetur, eius et ex minus nobis quae quibusdam, quos sunt tempore temporibus voluptatem.
+                        Autem.</p>
+                    <a class="but-blue text-uppercase mb-5" href="{% url 'area' %}">Learn More</a>
+                </div>
+            </div>
+            <div class="col-lg-6 px-0">
+                <img class="image-style block-2" src="{% static 'main/img/about/02.jpg' %}"
+                     alt="Vera Realty Townhouses">
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

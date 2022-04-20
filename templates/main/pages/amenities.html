@@ -1,0 +1,50 @@
+{% extends 'main/layout/layout.html' %}
+{% load static %}
+
+{% block title %}Amenities{% endblock %}
+
+{% block top %}
+    <style>
+        .font-amenities {
+            font-weight: 800;
+            color: #455694 !important;
+            text-decoration: underline #f5c269;
+            text-decoration-thickness: 3px;
+        }
+
+        @media (min-width: 992px) {
+            .block-1 {
+                border-radius: 0 0 0 20px;
+            }
+
+            .block-2 {
+                border-radius: 0 20px 20px 0;
+            }
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+
+    <section class="container-fluid bg-color mx-0 mb-0">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="container text-center">
+                    <h2 class="display-5 mb-0 mt-5">Amenities</h2>
+                    <p class="fs-4 p-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci dicta ea,
+                        harum id iste iure nesciunt officiis quidem repellat repudiandae tempora ullam, veniam, vitae.
+                        Cupiditate dolorem ducimus eligendi optio velit?</p>
+                    <a data-bs-toggle="modal"
+                       data-bs-target="#sign_up"
+                       class="but-blue">
+                        Sign up
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 px-0">
+                <img class="image-style block-1" src="{% static 'main/img/amenities/11.jpg' %}" alt="Vera Realty Townhouses">
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

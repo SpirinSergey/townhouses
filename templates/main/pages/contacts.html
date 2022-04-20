@@ -1,0 +1,183 @@
+{% extends 'main/layout/layout.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}Contacts{% endblock %}
+
+{% block top %}
+    <style>
+        .footer-contacts-none {
+            display: none;
+        }
+
+        .footer-contacts-block {
+            display: block;
+        }
+
+        .my-mb-0 {
+            margin-bottom: 0 !important;
+        }
+
+        .font-contact {
+            font-weight: 800;
+            color: #455694 !important;
+            text-decoration: underline #f5c269;
+            text-decoration-thickness: 3px;
+        }
+
+    </style>
+{% endblock %}
+
+{% block content %}
+    <section class="container bg-color block-contacts" style="padding-top: 67px;!important;">
+        <div class="row bg-color align-content-center d-flex justify-content-start">
+            <div class="col-lg-6">
+                <div class="row align-content-center ">
+                    <div class="col-lg-8">
+                        <h2 class="fs-2 text-center mb-4">Contacts</h2>
+                    </div>
+                    <div class="col-lg-12 mb-4">
+                        <h3 class="fs-5 fw-bolder"><img class="img-svg icons-style"
+                                                        src="{% static 'main/img/icons/location.svg' %}"
+                                                        alt="Location"> Location:</h3>
+                        <p class="fs-5" style="padding-left: 29px;">2850 NE 32nd St, Fort Lauderdale, FL 33306</p>
+                    </div>
+                    <div class="col-lg-12 mb-4">
+                        <h5 class="fs-5 fw-bolder"><img class="img-svg icons-style"
+                                                        src="{% static 'main/img/icons/email.svg' %}"
+                                                        alt="Email"> Email:</h5>
+                        <p class="fs-5" style="padding-left: 29px;"><a href="mailto:info@residencesbaccarat.com"
+                                                                       class="my-link">info@residencesbaccarat.com</a>
+                        </p>
+                    </div>
+                    <div class="col-lg-12 mb-4">
+                        <h5 class="fs-5 fw-bolder"><img class="img-svg icons-style"
+                                                        src="{% static 'main/img/icons/call.svg' %}"
+                                                        alt="Call"> Call:</h5>
+                        <p class="fs-5" style="padding-left: 29px;"><a href="tel:+1 (305) 306-7370"
+                                                                       class="my-link">+1 (305) 306-7370</a></p>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <div class="messengers-icons">
+                            <h5 class="fs-5 fw-bolder"><img class="img-svg icons-style"
+                                                            src="{% static 'main/img/icons/social.svg' %}"
+                                                            alt="Email"> Social:</h5>
+                            <div style="padding-left: 29px;">
+                                <div class="mb-2">
+                                    <a class="fs-5 icons-style whatsapp mx-1" href="https://wa.me/13053067370"
+                                       style="text-decoration: none;">
+                                        <img class="img-svg icons-style whatsapp"
+                                             src="{% static 'main/img/icons/whatsapp.svg' %}"
+                                             alt="whatsapp">
+                                    </a>
+                                    <a class="fs-5 icons-style telegram mx-1" href="https://wa.me/13053067370"
+                                       style="text-decoration: none;">
+                                        <img class="img-svg icons-style telegram"
+                                             src="{% static 'main/img/icons/telegram.svg' %}"
+                                             alt="whatsapp">
+                                    </a>
+                                    <a class="fs-5 icons-style instagram mx-1" href="https://wa.me/13053067370"
+                                       style="text-decoration: none;">
+                                        <img class="img-svg icons-style instagram"
+                                             src="{% static 'main/img/icons/instagram.svg' %}"
+                                             alt="whatsapp">
+                                    </a>
+                                    <a class="fs-5 icons-style facebook mx-1" href="https://wa.me/13053067370"
+                                       style="text-decoration: none;">
+                                        <img class="img-svg icons-style facebook"
+                                             src="{% static 'main/img/icons/facebook.svg' %}"
+                                             alt="whatsapp">
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h2 class="fs-2 mb-4 text-center">Write to us</h2>
+                <form method="post" id="contact_form" class="contact-form my-font">
+                    {% csrf_token %}
+                    <div class="row g-2 my-font-contact" style="opacity: 0.8 !important;">
+                        <div>
+                            <div class="form-floating mb-3">
+                                <div id="div_id_first_name">
+                                    <input type="text" name="first_name" id="id_first_name"
+                                           class="my-form form-bg-color font-regular"
+                                           placeholder="First name*" required>
+                                </div>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <div id="div_id_last_name">
+                                    <input type="text" name="last_name" id="id_last_name"
+                                           class="my-form form-bg-color font-regular"
+                                           placeholder="Last name*" required>
+                                </div>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <div id="div_id_phone">
+                                    <input type="tel" name="phone" id="id_phone"
+                                           class="my-form form-bg-color font-regular phone"
+                                           placeholder="Your phone*" required>
+                                </div>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <div id="div_id_email">
+                                    <input type="text" id="id_email" name="email"
+                                           class="my-form form-bg-color font-regular"
+                                           placeholder="Your email*" required>
+                                </div>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <div>
+                                    <select class="my-form form-bg-color font-regular" style="color: #848383"
+                                            name="agent_type"
+                                            aria-label="Default select example" required>
+                                        <option class="font-regular" style="color: #8b8b8b" value="">Are you a realtor?*
+                                        </option>
+                                        <option class="my-sel" value="yes">Yes</option>
+                                        <option class="my-sel" value="no">No</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <textarea name="message" id="id_message" style="height: 50px"
+                                          class="my-form form-bg-color font-regular rounded-0" rows="3"
+                                          placeholder="Message"></textarea>
+                            </div>
+                            <div class="mb-3 form-group g-recaptcha"
+                                 data-sitekey="6LdEDmIfAAAAAG0pduuigfo5zmBDCBCLbujFGpbi"></div>
+                            <button name="contact_form_btn" type="submit"
+                                    class="but-empty mb-5">Send
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+        <section class="container pt-5 pb-5">
+        <div class="row">
+            <div class="col-lg-12 order-lg-3 text-center">
+                <a data-bs-toggle="modal"
+                   data-bs-target="#exampleModal2"
+                   class="but-blue text-uppercase">
+                    Book an appointment
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid my-back mt-0 mx-0 shadow">
+        <div class="row" style="height: 50vh">
+            <div class="col-lg-12 px-0">
+                <div id='map' style="height: 100%; width: 100%"></div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+
+

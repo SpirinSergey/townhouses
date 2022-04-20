@@ -1,0 +1,78 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="{% static "main/img/icons/favicon.png" %}">
+
+    <!-- Bootstrap CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="/static/main/css/phone-code.css">
+
+    <!-- Styles -->
+    <link href="{% static 'main/css/update_style.css' %}" rel="stylesheet">
+    <link href="{% static 'main/fonts/fonts_style.css' %}" rel="stylesheet">
+
+    <!-- For datepicker -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- Map -->
+    <script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet'/>
+
+    <!-- Include other head -->
+    {% include 'main/includes/other_head.html' %}
+
+    <!-- Title -->
+    <title>Townhouses - {% block title %}Title{% endblock %}</title>
+
+</head>
+<body>
+
+{% block top %}
+{% endblock %}
+
+<header style="position: relative; z-index: 9999">
+    {% include 'main/layout/header.html' %}
+</header>
+
+<main class="bg-color" style="margin-top: 75px; position: relative; z-index: 999">
+    {% block content %}
+    {% endblock %}
+    <div id="cookie_notification">
+        <p class="font-regular" style="font-size: 15px !important; letter-spacing: 0; color: #65676a">
+            <b>Notice.</b>
+            TermsFeed uses cookies to provide necessary website functionality,
+            improve
+            your experience and
+            analyze our traffic. By using our website, you agree to our <a style="font-size: 15px;"
+                                                                           href="{% url 'terms' %}"><strong>Privacy
+            Policy</strong></a> and our Cookies Policy.</p>
+        <a class="cookie_accept but-blue"
+                style=" padding: 18px 28px; margin-bottom: 8px; margin-right: 10px">
+            accept
+        </a>
+    </div>
+</main>
+
+<!-- Include Modals -->
+{% include 'main/includes/modals/modal_book_an_appointment.html' %}
+{% include 'main/includes/modals/modal_sign_up.html' %}
+{% include 'main/includes/modals/modal_write_to_us.html' %}
+
+<footer class="footer">
+    {% include 'main/layout/footer.html' %}
+</footer>
+
+<!-- Include scripts -->
+{% include 'main/includes/down_footer.html' %}
+
+</body>
+</html>

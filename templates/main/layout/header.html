@@ -1,0 +1,31 @@
+{% load static %}
+
+<nav class="header navbar navbar-expand-lg navbar-light shadow fixed-top" style="background-color: white">
+    <div class="container">
+        <a href="{% url 'index' %}" class="me-auto me-lg-0">
+            <img style="height: 58px; width: auto;" src="{% static 'main/img/icons/logo.png' %}" alt="">
+        </a>
+        <button class="navbar-toggler btn-mobile-nav" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link font-gt-all font-index" href="{% url 'index' %}">Home</a>
+                </li>
+                <li class="nav-item"><a class="nav-link font-gt-all font-about" href="{% url 'about' %}">About</a>
+                </li>
+                <li class="nav-item"><a class="nav-link font-gt-all font-area" href="{% url 'area' %}">Area</a>
+                </li>
+                <li class="nav-item"><a class="nav-link font-gt-all font-amenities" href="{% url 'amenities' %}">Amenities</a>
+                </li>
+                <li class="nav-item"><a class="nav-link font-gt-all font-gallery" href="{% url 'gallery' %}">Gallery</a>
+                </li>
+                <li class="nav-item"><a class="nav-link font-gt-all font-available_units" href="{% url 'available_units' %}">Available
+                    Units</a></li>
+                <li class="nav-item"><a class="nav-link font-gt-all font-contact" href="{% url 'contacts' %}">Contacts</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,152 @@
+{% load static %}
+
+<script src="{% static 'main/js/phone-code.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.js' %}"></script>
+
+<script src="https://yastatic.net/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://yastatic.net/jquery/cookie/1.0/jquery.cookie.min.js"></script>
+
+{% if messages %}
+    <div class="modal" tabindex="-1" id="messagesuccess">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h5 class="modal-title">Successful</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    {% for message in messages %}
+                        {{ message|safe }}
+                    {% endfor %}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="my-but rounded-0" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endif %}
+
+<script>
+    $(window).on('load', function () {
+        $('#messagesuccess').modal('show');
+    });
+</script>
+
+
+<!-- svg to text -->
+<script type="text/javascript">
+    $('img.img-svg').each(function () {
+        var $img = $(this);
+        var imgClass = $img.attr('class');
+        var imgURL = $img.attr('src');
+        $.get(imgURL, function (data) {
+            var $svg = $(data).find('svg');
+            if (typeof imgClass !== 'undefined') {
+                $svg = $svg.attr('class', imgClass + ' replaced-svg');
+            }
+            $svg = $svg.removeAttr('xmlns:a');
+            if (!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+                $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
+            }
+            $img.replaceWith($svg);
+        }, 'xml');
+    });
+</script>
+<!-- svg to text -->
+
+
+<!-- map -->
+<script>
+    L.mapbox.accessToken = 'pk.eyJ1Ijoic3BpcmluIiwiYSI6ImNsMDBwMnllcDBtZHgzcG54bGp6YTd1eHgifQ.TCFU_kzhYZmOH-vpoLq0-A';
+    var map = L.mapbox.map('map')
+        .setView([26.16852919552952, -80.10657091802662], 15)
+        .addLayer(L.mapbox.styleLayer('mapbox://styles/spirin/cl1xdp629007215jqwyomqo0h'));
+
+    var myLayer = L.mapbox.featureLayer().addTo(map);
+
+    var geoJson = {
+        type: 'FeatureCollection',
+        features: [{
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-80.10657091802662, 26.16852919552952]
+            },
+            "properties": {
+                "title": "444 BRICKELL AVE., SUITE 800 MIAMI, FL 33131",
+                "icon": {
+                    "iconUrl": "/static/main/img/icons/marker.png",
+                    "iconSize": [70, 70], // size of the icon
+                    "iconAnchor": [25, 25], // point of the icon which will correspond to marker's location
+                    "popupAnchor": [0, -25], // point from which the popup should open relative to the iconAnchor
+                    "className": "dot"
+                }
+            }
+        }]
+    };
+
+    // Set a custom icon on each marker based on feature properties.
+    myLayer.on('layeradd', function (e) {
+        var marker = e.layer,
+            feature = marker.feature;
+
+        marker.setIcon(L.icon(feature.properties.icon));
+    });
+
+    // Add features to the map.
+    myLayer.setGeoJSON(geoJson);
+</script>
+<!-- /map -->
+
+
+<!-- scroll down footer -->
+<script>
+    var footer = $('.footer'),
+        scrollPrev = 0;
+
+    $(window).scroll(function () {
+        var scrolled = $(window).scrollTop();
+
+        {#if ( scrolled > 708 && scrolled > scrollPrev ) {#}
+        if (scrolled < 3500) {
+            footer.addClass('none');
+        } else {
+            footer.removeClass('none');
+
+        }
+        scrollPrev = scrolled;
+    });
+</script>
+<!-- /scroll down footer -->
+
+
+<!-- cookie -->
+<script>
+    function checkCookies() {
+        let cookieDate = localStorage.getItem('cookieDate');
+        let cookieNotification = document.getElementById('cookie_notification');
+        let cookieBtn = cookieNotification.querySelector('.cookie_accept');
+
+        // Если записи про кукисы нет или она просрочена на 1 год, то показываем информацию про кукисы
+        if (!cookieDate || (+cookieDate + 31536000000) < Date.now()) {
+            cookieNotification.classList.add('show');
+        }
+
+        // При клике на кнопку, в локальное хранилище записывается текущая дата в системе UNIX
+        cookieBtn.addEventListener('click', function () {
+            localStorage.setItem('cookieDate', Date.now());
+            cookieNotification.classList.remove('show');
+        })
+    }
+
+    checkCookies();
+</script>
+<!-- /cookie -->
+
+
+<!-- /ReCaptcha -->
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<!-- /ReCaptcha -->
+
+
