@@ -24,6 +24,10 @@ h1, h2, h3, h4, h5 {
     color: #455694;
 }
 
+h1, h2 {
+    font-variant: small-caps;
+}
+
 p, td, th, select, option, a, li {
     font-family: "Montserrat-Medium", sans-serif;
     color: #455694;
